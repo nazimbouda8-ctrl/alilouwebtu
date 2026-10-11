@@ -16,7 +16,7 @@
         }
 
         body {
-            background-color: #d8dcdb;
+            background-color: #0f1115;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,18 +24,18 @@
             overflow: hidden;
         }
 
-        /* Conteneur Simulateur Mobile Fixe */
+        /* Conteneur Simulateur Mobile */
         .app-container {
             width: 100%;
             max-width: 412px;
             height: 100vh;
             max-height: 100vh;
-            background-color: #e3e3e3;
+            background-color: #0f1115;
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
         }
 
         /* Système de pages SPA */
@@ -45,7 +45,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #e3e3e3;
+            background-color: #0f1115;
             display: flex;
             flex-direction: column;
             opacity: 0;
@@ -60,214 +60,168 @@
             transform: translateX(0);
         }
 
-        /* ==================== 1. PAGE DE LOGIN ==================== */
+        /* ==================== 1. NOUVELLE PAGE DE VERROUILLAGE (ECRAN DE DEBUT APK) ==================== */
         #login-page {
             justify-content: space-between;
             align-items: center;
-            padding: 30px 24px 15px 24px;
+            padding: 40px 24px 30px 24px;
             text-align: center;
-            overflow-y: auto;
+            background-color: #0f1115;
+            color: white;
+            direction: rtl;
         }
 
-        .login-body-wrapper {
+        .lock-card-box {
+            background-color: #1a1d24;
+            border-radius: 20px;
+            padding: 24px 20px;
             width: 100%;
+            max-width: 330px;
+            margin-top: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .progres-logo-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .progres-brand {
+        .progres-brand-dark {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            position: relative;
+            gap: 12px;
+            margin-bottom: 12px;
         }
 
-        .progres-arcs {
-            width: 45px;
-            height: 45px;
-            position: relative;
-        }
-
-        .arc-red {
-            position: absolute;
-            width: 32px;
-            height: 32px;
-            border: 4px solid #e53935;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            border-radius: 50%;
-            transform: rotate(-30deg);
-        }
-
-        .arc-green {
-            position: absolute;
-            bottom: 0;
-            left: 5px;
-            width: 38px;
-            height: 38px;
-            border: 5px solid #009677;
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-radius: 50%;
-            transform: rotate(20deg);
-        }
-
-        .progres-text {
-            font-size: 34px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: #000000;
+        .progres-text-dark {
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            color: #ffffff;
             font-family: 'Arial', sans-serif;
             border-bottom: 4px solid #009677;
             padding-bottom: 2px;
         }
 
-        .ministry-row {
+        .ministry-row-dark {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin-top: 4px;
+            text-align: center;
+        }
+
+        .sub-ar-dark {
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.3;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-fr-dark {
+            font-size: 8px;
+            font-weight: 600;
+            color: #a0a5b5;
+        }
+
+        .flag-dz-small {
+            width: 22px;
+            height: 14px;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Section Empreinte Digital */
+        .fingerprint-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .fingerprint-circle {
+            width: 90px;
+            height: 90px;
+            background-color: #1d222e;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            margin-top: 8px;
+            margin-bottom: 25px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        .ministry-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
+        .fingerprint-circle i {
+            font-size: 44px;
+            color: #10b981;
         }
 
-        .sub-ar {
+        .lock-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .lock-subtitle {
             font-size: 14px;
-            font-weight: 800;
-            color: #000000;
-            line-height: 1.2;
-        }
-
-        .sub-fr {
-            font-size: 8.5px;
-            font-weight: 700;
-            color: #000000;
-        }
-
-        .flag-dz {
-            width: 28px;
-            height: 18px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-            border: 1px solid #ccc;
-        }
-
-        .login-header-title {
-            font-size: 20px;
-            font-weight: 800;
-            color: #83888b;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-
-        .login-form {
-            width: 100%;
-        }
-
-        .input-group {
-            width: 100%;
-            position: relative;
-            margin-bottom: 12px;
-        }
-
-        .input-group i.left-icon {
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #009677;
-            font-size: 16px;
-        }
-
-        .input-group i.right-icon {
-            position: absolute;
-            right: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #71777d;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 12px 45px;
-            border: 2px solid #009677;
-            border-radius: 25px;
-            outline: none;
-            font-size: 15px;
-            background-color: #ededed;
-            color: #555;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
-        }
-
-        .input-field.password {
-            border-color: #c4c8cb;
-        }
-
-        .input-field::placeholder {
-            color: #7d8489;
+            color: #9ca3af;
             font-weight: 500;
         }
 
-        .btn-login {
+        /* Bouton & Liens */
+        .lock-bottom-actions {
             width: 100%;
-            padding: 12px;
-            background-color: #009677;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn-retry {
+            width: 100%;
+            max-width: 330px;
+            padding: 16px;
+            background-color: #10b981;
             color: white;
             border: none;
-            border-radius: 25px;
-            font-size: 15px;
+            border-radius: 30px;
+            font-size: 18px;
             font-weight: 800;
-            letter-spacing: 0.5px;
             cursor: pointer;
-            margin-top: 10px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            transition: transform 0.1s ease;
         }
 
-        .btn-login:active {
-            transform: scale(0.98);
-            background-color: #007a61;
+        .btn-retry:active {
+            transform: scale(0.97);
+            background-color: #059669;
         }
 
-        .error-message {
-            color: #dc2626;
-            font-size: 12px;
-            margin-top: 6px;
-            display: none;
-            font-weight: 600;
-        }
-
-        .login-footer {
-            font-size: 10px;
-            color: #71777d;
+        .link-password {
+            color: #9ca3af;
+            font-size: 14px;
             font-weight: 700;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            text-decoration: underline;
+            cursor: pointer;
         }
 
-        /* ==================== 2. PAGE ACCUEIL (HOME AVEC ZONE DÉFILANTE) ==================== */
+        /* ==================== 2. PAGE ACCUEIL (HOME) ==================== */
+        #home-page, #card-page, #onou-page, #empty-page {
+            background-color: #e3e3e3;
+            direction: ltr;
+        }
+
         .scrollable-content {
             flex: 1;
             overflow-y: auto;
             padding: 16px;
             background-color: #ffffff;
-            /* Empêche le chevauchement avec la barre fixe du bas */
             padding-bottom: 20px; 
         }
 
@@ -330,7 +284,7 @@
         .grid-item i { font-size: 18px; margin-bottom: 4px; }
         .grid-item span { font-size: 12px; font-weight: 600; line-height: 1.1; }
 
-        /* BARRE DE NAVIGATION EN BAS (FIXE TOUJOURS VISIBLE) */
+        /* BARRE DE NAVIGATION EN BAS */
         .bottom-nav-wrapper {
             position: relative;
             bottom: 0;
@@ -517,56 +471,42 @@
 
     <div class="app-container">
 
-        <!-- 1. LOGIN PAGE -->
+        <!-- 1. ECRAN DE VERROUILLAGE / DEBUT APK -->
         <div id="login-page" class="page active">
-            <div class="login-body-wrapper">
-                <div class="progres-logo-box">
-                    <div class="progres-brand">
-                        <div class="progres-arcs">
-                            <div class="arc-red"></div>
-                            <div class="arc-green"></div>
-                        </div>
-                        <span class="progres-text">PROGRES</span>
+            <div class="lock-card-box">
+                <div class="progres-brand-dark">
+                    <div class="progres-arcs" style="width: 45px; height: 45px; position: relative;">
+                        <div class="arc-red" style="position: absolute; width: 32px; height: 32px; border: 4px solid #e53935; border-right-color: transparent; border-bottom-color: transparent; border-radius: 50%; transform: rotate(-30deg);"></div>
+                        <div class="arc-green" style="position: absolute; bottom: 0; left: 5px; width: 38px; height: 38px; border: 5px solid #009677; border-top-color: transparent; border-right-color: transparent; border-radius: 50%; transform: rotate(20deg);"></div>
                     </div>
-
-                    <div class="ministry-row">
-                        <div class="ministry-text">
-                            <span class="sub-ar">وزارة التعليم العالي والبحث العلمي</span>
-                            <span class="sub-fr">Ministère de l'Enseignement Supérieur et de la Recherche Scientifique</span>
-                        </div>
-                        <img class="flag-dz" src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg" alt="Drapeau Algérie">
-                    </div>
+                    <span class="progres-text-dark">PROGRES</span>
                 </div>
 
-                <div class="login-header-title">Student Portal</div>
-
-                <form class="login-form" onsubmit="handleLogin(event)">
-                    <div class="input-group">
-                        <i class="fa-solid fa-user left-icon"></i>
-                        <input type="text" id="username" class="input-field" placeholder="Registration number" value="33155005" required>
-                    </div>
-
-                    <div class="input-group">
-                        <i class="fa-solid fa-lock left-icon"></i>
-                        <input type="password" id="password" class="input-field password" placeholder="Password" value="12345678" required>
-                        <i class="fa-regular fa-eye right-icon" onclick="togglePassword()"></i>
-                    </div>
-
-                    <div id="error-msg" class="error-message">Identifiants incorrects !</div>
-
-                    <button type="submit" class="btn-login">LOGIN</button>
-                </form>
+                <div class="ministry-row-dark">
+                    <span class="sub-ar-dark">
+                        وزارة التعليم العالي والبحث العلمي
+                        <img class="flag-dz-small" src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg" alt="Drapeau Algérie">
+                    </span>
+                    <span class="sub-fr-dark">Ministère de l'Enseignement Supérieur et de la Recherche Scientifique</span>
+                </div>
             </div>
 
-            <div class="login-footer">
-                Ministry of Higher Education and Scientific Research<br>
-                Copyright © 2026
+            <div class="fingerprint-section">
+                <div class="fingerprint-circle">
+                    <i class="fa-solid fa-fingerprint"></i>
+                </div>
+                <div class="lock-title">التطبيق مقفل</div>
+                <div class="lock-subtitle">افتح القفل ببصمتك أو Face ID للمتابعة.</div>
+            </div>
+
+            <div class="lock-bottom-actions">
+                <button class="btn-retry" onclick="navigateTo('home-page')">إعادة المحاولة</button>
+                <span class="link-password" onclick="navigateTo('home-page')">تسجيل الدخول بكلمة المرور</span>
             </div>
         </div>
 
         <!-- 2. HOME PAGE -->
         <div id="home-page" class="page">
-            <!-- Zone avec défilement interne -->
             <div class="scrollable-content">
                 <h1 class="title-home">Student Portal</h1>
 
@@ -673,7 +613,7 @@
             </div>
         </div>
 
-        <!-- 3. PAGE CARTE : VERTICAL PORTRAIT PERFECT -->
+        <!-- 3. PAGE CARTE -->
         <div id="card-page" class="page">
             <div class="cards-page-container">
                 <div class="card-flip-container" onclick="flipCard(this)">
@@ -694,7 +634,7 @@
                 </div>
             </div>
 
-            <!-- Barre de navigation bas FIXE (Cartes) -->
+            <!-- Barre de navigation bas FIXE -->
             <div class="bottom-nav-wrapper">
                 <nav class="bottom-nav">
                     <div class="nav-item" onclick="navigateTo('home-page')">
@@ -752,23 +692,6 @@
 
     <script>
         let navigationHistory = ['login-page'];
-
-        function handleLogin(event) {
-            event.preventDefault();
-            navigateTo('home-page');
-        }
-
-        function togglePassword() {
-            const pwd = document.getElementById('password');
-            const icon = event.target;
-            if (pwd.type === 'password') {
-                pwd.type = 'text';
-                icon.classList.replace('fa-eye', 'fa-eye-slash');
-            } else {
-                pwd.type = 'password';
-                icon.classList.replace('fa-eye-slash', 'fa-eye');
-            }
-        }
 
         function navigateTo(pageId, title = '') {
             if (title) {
